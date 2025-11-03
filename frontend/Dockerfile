@@ -1,7 +1,8 @@
 # Development stage
 FROM node:24-alpine AS development
 
-RUN corepack enable && corepack prepare pnpm@10 --activate
+# Install pnpm globally
+RUN npm install -g pnpm@10
 
 WORKDIR /app
 
